@@ -1,0 +1,49 @@
+import time
+print('for callculate press"s" ')
+time.sleep(1)
+print('for stop press"quit"') 
+while True:
+    print("let's go...prees anything..")
+    user=input()
+    if user=='s':
+        print('This is my frist simple callculator...')
+        time.sleep(1)
+        frist_num=float(input('please enter your frist number:'))
+        time.sleep(1)
+        oparation  =str(input("your oparation's oparator:.....only including(+,-,/,*,%,**):"))
+        time.sleep(1)
+        next_num=float(input('please enter your second number:'))
+        #coding of oparation arator function
+        def sum(frist_num,oparation ,next_num):
+            if '+' in oparation  :
+                math=frist_num+next_num
+            elif '*' in oparation  :
+                math=frist_num*next_num
+            elif '/' in oparation  :
+                    math=frist_num/next_num
+            elif '%' in oparation  :
+                    math=frist_num%next_num
+            elif '**' in oparation  :
+                    math=frist_num**next_num
+            elif '-' in oparation  :
+                    math=frist_num-next_num
+            else:
+                print ('try again...')
+            return math
+        print('callculating...')
+        print('please wait...')
+        #for wating time
+        time.sleep(1)
+        #call function and output result
+        my_reasult=sum(frist_num,oparation ,next_num)
+        print(my_reasult)
+        time.sleep(1)
+        time.sleep(0)
+        print('thank you for useing it...👍👍👍')
+        time.sleep(1)
+        print("By a simple programer Morsalin Rifat")
+        print("..............end............")
+    elif user=='quit':
+        break
+    else:
+        print('try it again...')
